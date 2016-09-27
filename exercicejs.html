@@ -7,14 +7,17 @@
 </head>
 <body>
 
+<button type="button" onclick="toggle_text();">Générer</button>
 
-<p id="texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+<p span id="span_txt" style="display:none" onclick="changer_style()">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
   consequat.
+  </span>
+  
 </p>
 
- <button onclick="changer_style()">Changer Style</button>
 
  <script>
 
@@ -26,6 +29,21 @@
         p.style.padding="5px";
 
       }
+
 </script>
+
+<script>
+
+   function toggle_text() {
+  var span = document.getElementById("span_txt");
+  if(span.style.display == "none") {
+    span.style.display = "inline";
+  } else {
+    span.style.display = "none";
+  }
+}
+</script>
+
+
 
 </body>
